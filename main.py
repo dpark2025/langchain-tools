@@ -18,9 +18,10 @@ agent = create_agent(
 
 def main():
     # Run the agent
-    agent.invoke(
+    result = agent.invoke(
         {"messages": [{"role": "user", "content": "what is the weather in sf"}]}
     )
+    print(result)
 
 
 if __name__ == "__main__":
