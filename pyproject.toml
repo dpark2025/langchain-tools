@@ -8,3 +8,34 @@ dependencies = [
     "langchain[anthropic]>=1.0.5",
     "python-dotenv>=1.2.1",
 ]
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.4.0",
+    "ruff>=0.14.5",
+]
+
+[tool.ruff]
+# Target Python 3.12+
+target-version = "py312"
+
+# Enable auto-fixing
+fix = true
+
+# Line length
+line-length = 88
+
+[tool.ruff.lint]
+# Enable common rule sets
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort
+    "N",   # pep8-naming
+    "UP",  # pyupgrade
+    "B",   # flake8-bugbear
+]
+
+# Ignore specific rules if needed
+ignore = []
